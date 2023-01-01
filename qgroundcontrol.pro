@@ -52,7 +52,7 @@ LinuxBuild {
 }
 
 WindowsBuild {
-    RC_ICONS = resources/icons/qgroundcontrol.ico
+    RC_ICONS = resources/icons/vyorius.ico
     CONFIG += resources_big
 }
 
@@ -1530,6 +1530,7 @@ contains (CONFIG, QGC_DISABLE_INSTALLER_SETUP) {
 }
 
 DISTFILES += \
+    resources/vyorius.ico \
     src/QmlControls/QGroundControl/Specific/qmldir
 
 #

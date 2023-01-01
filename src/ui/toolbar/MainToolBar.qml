@@ -67,7 +67,7 @@ Rectangle {
         QGCToolBarButton {
             id:                     currentButton
             Layout.preferredHeight: viewButtonRow.height
-            icon.source:            "/res/QGCLogoFull"
+            icon.source:            "/res/VyoriusLogo"
             logo:                   true
             onClicked:              mainWindow.showToolSelectDialog()
         }
@@ -83,6 +83,7 @@ Rectangle {
             onClicked:          _activeVehicle.closeVehicle()
             visible:            _activeVehicle && _communicationLost && currentToolbar === flyViewToolbar
         }
+
     }
 
     QGCFlickable {
@@ -161,6 +162,14 @@ Rectangle {
         }
     }
 
+    QGCButton {
+        id:                 logoutButton
+        text:               qsTr("Logout")
+        anchors.top:        viewButtonRow.top
+        anchors.right:      parent.right
+        anchors.margins:    ScreenTools.defaultFontPixelHeight * 0.66
+        //visible:            currentToolbar === flyViewToolbar
+    }
     // Small parameter download progress bar
     Rectangle {
         anchors.bottom: parent.bottom
